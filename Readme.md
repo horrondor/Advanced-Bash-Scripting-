@@ -67,8 +67,7 @@ The Advanced Bash-Scripting Guide is a comprehensive resource that starts from b
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/bash-learning.git
-cd bash-learning
+git clone git@github.com:horrondor/Advanced-Bash-Scripting-.git
 ```
 
 2. Run scripts:
