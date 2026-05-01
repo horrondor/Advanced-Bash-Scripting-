@@ -20,7 +20,7 @@ if [ -n "$1" ]
 then
   lines=$1
 else
-  lines=$lines # Default, if not specified on command-line    
+  lines=$LINES # Default, if not specified on command-line    
 fi
 
 # Stephane Chazelas suggets the following
@@ -52,7 +52,7 @@ fi # Doublecheck if in right directory before messing with log file.
 # exit $E_XCD 
 #}
 
-tail -n $lines messages > mesg.temp # Save last section of message log file.
+tail -n "$lines" messages > mesg.temp # Save last section of message log file.
 mv mesg.temp messages
 
 # cat /dev/null > messages
