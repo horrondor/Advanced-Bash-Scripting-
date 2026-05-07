@@ -58,3 +58,22 @@ if [ "$size1 -gt $size2"  ]
 then
   echo "$My_file1 has greater disk usage which is $size1"
 fi
+
+# =========================== #
+
+bash echo \a
+# 0/p: a Doesn't preserves \
+
+bash echo "\a"
+# o/p: \a preserves \
+
+# ================== #
+
+# Meaning of different symbol
+
+# | Symbol | Meaning               |
+# | ------ | --------------------- |
+# | `-n`   | string not empty      |
+# | `-z`   | string empty          |
+# | `-e`   | file exists           |
+# | `nc`   | network tool (netcat) |
