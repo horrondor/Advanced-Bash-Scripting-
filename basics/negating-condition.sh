@@ -1,0 +1,29 @@
+#!/bin/bash
+# Negating a condition using !
+true # The "true" builtin.
+echo "exit status of \"true\" = $?"  # 0
+
+! true
+echo "exit status of \"true\" = $?" # 0
+# Note that the "!" needs a space between it and the command.
+# !true leads to a "command not found" error
+#
+# The '!' operator prefexing a command invokes the Bash history mechanism.
+
+true
+!true
+# No error this time, but no neagtion either.
+# It just repeats the previous command (true).
+
+# ===========================================#
+# Preceding a _pipe_ with ! inverts the exit status returned.
+ls | bogus_command  # bash: bogus_command: command not found
+echo $?             # 127
+
+! ls | bogus_command # bash: bogus_command: command not found
+echo $?              # 0
+# Note that the ! does not chnage the execution of the pipe.
+# Only the exit status changes.
+# ===================================== #
+
+
