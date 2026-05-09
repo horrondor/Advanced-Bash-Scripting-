@@ -1,5 +1,6 @@
 #!/bin/bash
 # Negating a condition using !
+
 true # The "true" builtin.
 echo "exit status of \"true\" = $?"  # 0
 
@@ -26,4 +27,5 @@ echo $?              # 0
 # Only the exit status changes.
 # ===================================== #
 
-
+#  By convention, an 'exit 0' indicates success,
+#+ while a non-zero exit value means an error or anomalous condition.
