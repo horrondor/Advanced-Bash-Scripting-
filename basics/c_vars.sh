@@ -39,3 +39,12 @@ n=1; let --n && echo "True" || echo "False"  # False
 n=1; let n-- && echo "True" || echo "False"  # True
 
 echo 
+
+(( t = a<45?7:11 ))  # C-style trinary operator.
+#       ^  ^ ^
+echo "If a < 45, then t = 7, else t = 11."  # a = 23
+echo "t = $t "                              # t = 7
+
+echo
+
+
